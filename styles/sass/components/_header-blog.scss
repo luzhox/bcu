@@ -1,0 +1,149 @@
+.header-blog {
+  margin-top: 96px;
+
+  &__head {
+    height: 526px;
+    border-radius: 20px;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-end;
+    padding-bottom: 24px;
+    padding-left: 24px;
+
+    .text {
+      max-width: 586px;
+      background-color: #fff;
+      border-radius: 36px;
+      background: #FFF;
+      padding: 66px 32px;
+      box-shadow: 0px 20px 40px rgba(215, 217, 223, 0.589);
+
+      h3 {
+        color: #002232;
+        font-family: $rubik;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: #302E57;
+        text-align: justify;
+        font-family: $rubik;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 180%;
+      }
+    }
+  }
+
+  &__content {
+    &__posts {
+      display: flex;
+      flex-flow: wrap;
+
+      @include tablet {
+        justify-content: space-between;
+      }
+    }
+
+    &__item {
+      max-width: 357px;
+      width: 100%;
+      margin-bottom: 32px;
+
+
+      .text {
+        &__date {
+          display: flex;
+          flex-flow: wrap;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 16px;
+
+          &__cat {
+            ul {
+              li {
+                list-style: none;
+
+                a {
+                  color: #002232;
+                  font-family: $rubik;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 140%;
+                  border-bottom: 1px solid #08ACBB;
+                }
+              }
+            }
+          }
+
+          &__date {
+            color: #002232;
+            font-family: $rubik;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+            /* 16.8px */
+          }
+        }
+
+        p {
+          color: #002232;
+          font-family: $rubik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          /* 33.6px */
+        }
+      }
+
+      .img {
+        height: 216px;
+        width: 100%;
+        margin-bottom: 24px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 32px;
+
+      @include tablet {
+        margin-bottom: 40px;
+        margin-top: 40px;
+      }
+
+      h3 {
+        color: #002232;
+        text-align: center;
+        font-family: $rubik;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+
+        line-height: 120%;
+
+        /* 48px */
+        @include tablet {
+          font-size: 40px;
+
+        }
+      }
+    }
+  }
+
+}

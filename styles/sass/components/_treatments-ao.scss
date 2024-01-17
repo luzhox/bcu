@@ -1,0 +1,74 @@
+.treatments-ao {
+  background: #bdfffd41;
+
+  &__title {
+    h3 {
+      color: var(--Azul, #002169);
+      text-align: center;
+      font-family: $rubik;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+
+      /* 52px */
+      @include tablet {
+        font-size: 40px;
+
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 64px;
+
+    @include mobile {
+      overflow-x: scroll;
+      padding: 16px;
+      position: relative;
+      scroll-snap-type: x mandatory;
+      scroll-snap-align: middle;
+    }
+
+    &__item {
+      width: 100%;
+      max-width: 282px;
+      min-width: 282px;
+      height: 255px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      background: #FFF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      box-shadow: 0px 0px 24px 0px rgba(131, 112, 204, 0.25);
+      margin-right: 24px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      h4 {
+        color: var(--Turqueza, #00AFAA);
+        font-family: $rubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        /* 31.2px */
+        margin-top: 25px;
+      }
+
+      &:nth-child(2n) {
+        h4 {
+          color: #002169;
+        }
+      }
+    }
+  }
+}

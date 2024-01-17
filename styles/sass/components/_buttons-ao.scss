@@ -1,0 +1,33 @@
+.buttons-ao {
+  position: relative;
+  top: -90px;
+
+  .container {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  &__content {
+    margin-left: auto;
+    margin-right: auto;
+    
+    text-align: center;
+
+    a {
+      width: 100%;
+      max-width: 427px;
+
+      &:first-child {
+        display: none;
+      }
+
+      @include tablet {
+        &:first-child {
+          display: none;
+          margin-right: 32px;
+        }
+      }
+
+    }
+  }
+}

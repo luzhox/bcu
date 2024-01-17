@@ -65,7 +65,7 @@
                 display: block;
 
                 @include tablet {
-                    height: 74px;
+                    height: 54px;
                 }
 
                 @include desktop {
@@ -183,7 +183,7 @@
                         display: inline-block;
                         width: 100%;
                         font-size: 16px;
-                        line-height: 15px;
+                        line-height: 24px;
                         position: relative;
                         color: $gray;
 
@@ -235,17 +235,19 @@
                         position: relative;
 
                         &.menu-item-has-children {
+                            margin-right: 48px;
+
                             a {
                                 &::after {
                                     content: "";
                                     width: 16px;
-                                    height: 11px;
-                                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='11' viewBox='0 0 16 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.00118 3.43194C0.713953 3.12137 0.561861 2.70942 0.578364 2.28672C0.594867 1.86401 0.778614 1.46517 1.08918 1.17794C1.39975 0.890711 1.8117 0.738619 2.23441 0.755122C2.65712 0.771625 3.05595 0.955372 3.34318 1.26594L6.53118 4.71294C6.71844 4.91547 6.94556 5.07708 7.19828 5.1876C7.451 5.29813 7.72385 5.35518 7.99968 5.35518C8.27551 5.35518 8.54836 5.29813 8.80108 5.1876C9.0538 5.07708 9.28093 4.91547 9.46818 4.71294L12.6562 1.26594C12.9434 0.955372 13.3423 0.771625 13.765 0.755122C14.1877 0.738619 14.5996 0.890711 14.9102 1.17794C15.2208 1.46517 15.4045 1.86401 15.421 2.28672C15.4375 2.70942 15.2854 3.12137 14.9982 3.43194L9.46818 9.41194C9.28093 9.61447 9.0538 9.77608 8.80108 9.8866C8.54836 9.99713 8.27551 10.0542 7.99968 10.0542C7.72385 10.0542 7.451 9.99713 7.19828 9.8866C6.94556 9.77608 6.71844 9.61447 6.53118 9.41194L1.00118 3.43194Z' fill='%233DD092'/%3E%3C/svg%3E%0A");
+                                    height: 9px;
+                                    background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.072 1.41798L8.4179 8.07205C8.2121 8.27784 7.87874 8.27787 7.67294 8.07206L1.01886 1.41798C0.813037 1.21216 0.813076 0.878781 1.01886 0.673001C1.22465 0.467211 1.55801 0.46721 1.7638 0.673001L8.04539 6.95459L14.327 0.673C14.5328 0.467191 14.8662 0.467193 15.072 0.673001C15.2778 0.878809 15.2778 1.21217 15.072 1.41798Z' fill='%2300AFAA' stroke='%2300AFAA' stroke-width='0.5'/%3E%3C/svg%3E");
                                     display: inline-block;
                                     margin-left: 4px;
                                     position: absolute;
                                     right: -24px;
-                                    top: 24px;
+                                    top: 28px;
                                 }
                             }
 
@@ -267,7 +269,8 @@
                             @include transition(.3s);
                             display: block;
                             width: auto;
-                            font-weight: 500;
+                            font-size: 16px;
+                            font-weight: 400;
                             border: 0px;
                         }
 
@@ -323,7 +326,7 @@
                             ul {
                                 display: block;
                                 position: absolute;
-                                left: -55%;
+                                left: 0px;
                                 width: 220px;
                                 height: auto;
                                 padding: 12px;

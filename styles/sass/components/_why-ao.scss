@@ -1,0 +1,129 @@
+.why-ao {
+  &__title {
+    h3 {
+      color: var(--blue, #002169);
+      font-family: $rubik;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+
+      /* 49.4px */
+      strong {
+        color: var(--Turqueza, #00AFAA);
+        font-family: $rubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+      }
+
+      @include tablet {
+        font-size: 48px;
+
+        strong {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 484px;
+    height: 288px;
+    border-radius: 25px;
+    background-size: cover !important;
+    background-position: center !important;
+    position: relative;
+    margin-bottom: 32px;
+
+    @include tablet {
+      height: 458px;
+      margin-bottom: 0px;
+    }
+
+    .circle {
+      position: absolute;
+      right: -19px;
+      top: 0;
+      border-radius: 50%;
+      opacity: 0.4;
+      background: #F3F573;
+      filter: blur(70px);
+      width: 365px;
+      height: 335px;
+      Z-INDEX: -1;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    max-width: 925px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    margin-top: 40px;
+    align-items: center;
+  }
+
+  &__steps {
+    max-width: 324px;
+
+    &__item {
+      display: flex;
+      margin-bottom: 25px;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      h4 {
+        color: rgb(217, 222, 238);
+        font-family: $rubik;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        min-width: 25px;
+      }
+
+      p {
+        color: rgb(217, 222, 238);
+        font-family: $rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        margin-left: 18px;
+        /* 20.8px */
+      }
+
+      &.active {
+        h4 {
+          color: var(--Turqueza, #00AFAA);
+
+        }
+
+        p {
+          color: var(--Negro, #2A2938);
+
+        }
+      }
+
+      @include mobile {
+        h4 {
+          color: var(--Turqueza, #00AFAA);
+
+        }
+
+        p {
+          color: var(--Negro, #2A2938);
+
+        }
+      }
+    }
+  }
+}

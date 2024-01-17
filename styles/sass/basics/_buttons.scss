@@ -1,17 +1,16 @@
 .btn {
-    padding: 16px 48px;
+    padding: 16px 24px;
     display: inline-block;
     font-size: 18px;
-    @include border-radius(8px);
+    @include border-radius(48px);
     @include transition(.3s);
 
     &__primary {
         @extend .btn;
         background-color: $primary;
-        color: $color-primary-text-button;
-        font-size: 18px;
+        color: white;
+        font-size: 16px;
         line-height: 156%;
-        text-transform: uppercase;
         font-weight: 800;
         letter-spacing: 0.6px;
 
@@ -24,6 +23,34 @@
             background: transparent;
             border: 1px solid $primary;
             color: $primary;
+            font-weight: 700;
+
+            &:hover {
+                border: 1px solid $primary-hover;
+                color: $primary-hover;
+            }
+        }
+    }
+
+    &__secondary {
+        @extend .btn;
+        background: #018AAF;
+        color: white;
+        font-size: 16px;
+        line-height: 156%;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+
+        &:hover {
+            background: $primary-hover;
+        }
+
+        &--border {
+            @extend .btn;
+            background: transparent;
+            border: 1px solid $primary;
+            color: $primary;
+            font-weight: 700;
 
             &:hover {
                 border: 1px solid $primary-hover;

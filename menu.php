@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="site-header-brand">
 					<a class="site-header-brand__item" href="<?php echo esc_url(home_url('/')); ?>">
-						<img id="brand" data-brand="<?php echo get_theme_mod('brand_img'); ?>" data-brandtwo="<?php echo get_theme_mod('brand_img-revert'); ?>" src="<?php echo get_theme_mod('brand_img'); ?>">
+						<h1><img id="brand" data-brand="<?php echo get_theme_mod('brand_img'); ?>" data-brandtwo="<?php echo get_theme_mod('brand_img-revert'); ?>" src="<?php echo get_theme_mod('brand_img'); ?>" title="Banco del cordón Umbilical" alt="Banco del cordón Umbilical"></h1>
 					</a>
 				</div>
 				<div class="site-header-sandwich">

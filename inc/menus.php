@@ -7,6 +7,9 @@ function menus(){
     'footer' =>__('Links de Footer','Page')
   ));
   register_nav_menus(array(
+    'footertwo' =>__('Links de Footer2','Page')
+  ));
+  register_nav_menus(array(
     'redes' =>__('Redes Sociales','Page')
   ));
 }

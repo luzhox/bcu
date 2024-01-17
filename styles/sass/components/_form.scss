@@ -1,0 +1,107 @@
+.form-bcu {
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 64px;
+
+  &.bgAlt {
+    background-color: #F2FFFF;
+  }
+
+  .circle {
+    width: 367px;
+    height: 335px;
+    position: absolute;
+    left: 0;
+    border-radius: 367px;
+    opacity: 0.7;
+    background: #D7F8FF;
+    filter: blur(70px);
+    top: 150px;
+    left: 0px;
+
+    &:nth-child(2) {
+      background: #73F5AF;
+      right: -150px;
+      left: inherit;
+      top: 0;
+      opacity: 0.2;
+
+    }
+
+    &:nth-child(3) {
+      top: -50px;
+      background: #73F5AF;
+      opacity: 0.2;
+
+      left: -150px;
+    }
+  }
+  .checkbox-button .input-checkbox .wpcf7-list-item input:checked:before{
+    top:17px;
+  }
+  .input-checkbox p {
+    display: flex;
+    align-items: center;
+  }
+  .cP{
+    position: relative;
+  }
+  &__content {
+    h3 {
+      color: var(--Negro, #2A2938);
+      font-family: $rubik;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+
+      /* 49.4px */
+      strong {
+        color: var(--Turqueza, #00AFAA);
+        font-family: $rubik;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+      }
+
+      @include tablet {
+        font-size: 48px;
+
+        strong {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+  .wf-btn-row,
+  .btn-submit,
+  .btn-form {
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .radiocontent {
+    @include mobile {
+      flex-flow: wrap;
+
+      .wpcf7-radio {
+        flex-flow: wrap;
+
+        .wpcf7-list-item {
+          label {
+            margin-left: 0px;
+          }
+
+          width: 100%;
+          display: block;
+          margin: 0;
+          padding: 8px 0px;
+        }
+      }
+    }
+  }
+}

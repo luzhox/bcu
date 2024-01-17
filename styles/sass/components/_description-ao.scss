@@ -1,0 +1,53 @@
+.description-ao {
+  &__content {
+    display: flex;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    max-width: 690px;
+    width: 100%;
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 0px;
+    }
+
+    p {
+      color: #1E3D7C;
+      text-align: justify;
+      font-family: $rubik;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      /* 27px */
+    }
+  }
+
+  &__resalt {
+
+    img {
+      height: auto;
+      width: 100%;
+      display: block;
+    }
+
+    @include tablet {
+
+      img {
+        height: 254px;
+        width: auto;
+      }
+
+      margin-left: 64px;
+
+    }
+
+  }
+}

@@ -8,4 +8,6 @@
   require('inc/libraries.php');
   require('lib/helpers.php');
   require('inc/etc.php');
+  include_once('afiliaciones-cpt.php');
+
   ?>

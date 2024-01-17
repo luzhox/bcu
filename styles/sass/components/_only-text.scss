@@ -1,0 +1,18 @@
+.only-text {
+  background: #F2FFFF;
+
+  p {
+    color: #000;
+    text-align: justify;
+    font-family: $rubik;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+
+    /* 25.2px */
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+}

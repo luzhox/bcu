@@ -34,13 +34,18 @@ $breakpoint-desktop: 1240px;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: initial;
-
+    padding-top: 32px;
+    padding-bottom: 32px;
+    position: relative;
     @include tablet {
         max-width: 750px;
+        width: 100%;
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 
     @include desktop {
-        max-width: 1184px;
+        max-width: 1200px;
         box-sizing: border-box;
     }
 }

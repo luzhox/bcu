@@ -1,0 +1,81 @@
+.discount-ao {
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    margin-top: 48px;
+
+    @include tablet {
+      flex-flow: row;
+    }
+
+    &__item {
+      display: flex;
+      flex-flow: wrap;
+      align-items: center;
+      margin-right: 52px;
+      margin-bottom: 54px;
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      h3,
+      h4,
+      h2 {
+        color: #F9523D;
+        font-family: $rubik;
+        font-size: 52px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        margin-right: 20px;
+      }
+
+      p {
+        color: #000;
+        font-family: $rubik;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 130%;
+        /* 28.6px */
+
+        @include tablet {
+          max-width: 272px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-flow: wrap;
+
+    h3,
+    h4,
+    h2 {
+      color: var(--Azul, #002169);
+      text-align: left;
+      font-family: $rubik;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+
+      @include tablet {
+        font-size: 48px;
+        text-align: center;
+
+      }
+
+      /* 62.4px */
+      strong {
+        font-weight: 600;
+        color: var(--Turqueza, #00AFAA);
+
+      }
+    }
+
+  }
+}

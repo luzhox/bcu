@@ -1,0 +1,136 @@
+.header-full {
+  height: 590px;
+  background-size: cover !important;
+  background-position: center !important;
+  width: 100%;
+  margin-top: 96px;
+  position: relative;
+
+  @include tablet {
+    height: 590px;
+
+  }
+
+  .container {
+    height: 590px;
+    align-items: center;
+    display: flex;
+  }
+
+  @media only screen and (min-width:1550px) {
+    height: 80vh;
+
+    .container {
+      height: 80vh;
+    }
+  }
+
+
+  .overlay {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.75) 4.07%, rgba(0, 0, 0, 0.20) 75.63%) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      background: linear-gradient(45deg, rgba(0, 0, 0, 0.65) 4.07%, rgba(0, 0, 0, 0.00) 55.63%) no-repeat;
+
+    }
+  }
+
+  &__content {
+    max-width: 490px;
+    position: relative;
+    z-index: 2;
+
+    .btn__primary {
+      margin-top: 16px;
+      background: var(--Azul, #002169);
+    }
+
+    h3,
+    h2,
+    h4 {
+      color: #FFF;
+      font-family: $rubik;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 24px;
+
+      @include tablet {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &.light {
+
+    h3,
+    h2,
+    h4 {
+      color: var(--Azul, #002169);
+
+      strong {
+        color: var(--Turqueza, #00AFAA);
+
+      }
+    }
+  }
+
+  &.synlab {
+
+    @include mobile {
+      background-position: -220px center !important;
+      height: 300px;
+
+      .container {
+        height: 300px;
+      }
+    }
+
+    .header-full__content {
+
+
+      img {
+        max-width: 280px;
+        height: auto;
+        display: block;
+        margin-bottom: 24px;
+
+        @include tablet {
+          max-width: 360px;
+          margin-bottom: 40px;
+
+        }
+      }
+    }
+  }
+
+  &.babyscreen {
+    .btn__primary {
+      margin-left: auto;
+      margin-right: auto;
+
+      @include tablet {
+        margin-left: 70px;
+      }
+    }
+
+    .header-full__content {
+      @include mobile {
+        text-align: center;
+      }
+
+      img {
+        width: 300px;
+        height: auto;
+        display: block;
+      }
+    }
+
+  }
+}

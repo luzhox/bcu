@@ -37,6 +37,12 @@ add_action( 'wp_enqueue_scripts', function() {
       $theme_ver,
       false//para que vaya en el header
     );
+    wp_enqueue_script( 'colorbox',
+    get_template_directory_uri().'/vendors/jquery.colorbox-min.js',
+    array( 'jquery' ),
+    $theme_ver,
+    false
+     );
 
       } );
 

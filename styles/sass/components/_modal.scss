@@ -10,6 +10,7 @@
         height: 100%;
         z-index: 9999999;
         opacity: 0;
+        cursor: pointer;
         @include transition(.3s);
     }
 
@@ -149,7 +150,8 @@
             animation: fadein 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
 
-        .modal-container {
+        .modal-container,
+        .modal-promotions__content {
             -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }

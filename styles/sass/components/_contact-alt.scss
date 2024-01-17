@@ -1,0 +1,179 @@
+.contact-alt {
+  position: relative;
+  overflow-x: hidden;
+
+
+  @include tablet {
+    .circle {
+      width: 367px;
+      height: 335px;
+      position: absolute;
+      left: 0;
+      border-radius: 367px;
+      opacity: 0.7;
+      background: #D7F8FF;
+      filter: blur(70px);
+      top: 150px;
+      left: 0px;
+
+      &:nth-child(2) {
+        background: #73F5AF;
+        right: -150px;
+        left: inherit;
+        top: 0;
+        opacity: 0.2;
+
+      }
+
+      &:nth-child(3) {
+        top: -50px;
+        background: #73F5AF;
+        opacity: 0.2;
+
+        left: -150px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+
+    @include tablet {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 594px;
+    width: 100%;
+
+    h3 {
+      color: var(--Azul, #002169);
+      font-family: $rubik;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 24px;
+
+      /* 65px */
+      @include tablet {
+        font-size: 50px;
+        margin-bottom: 36px;
+
+      }
+    }
+
+    p {
+      color: var(--Negro, #2A2938);
+      font-family: $rubik;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+
+      /* 18.2px */
+      strong {
+        font-weight: 700;
+      }
+    }
+
+    .two-columns {
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-between;
+      width: 100%;
+
+      @include tablet {
+        margin-bottom: 32px;
+      }
+
+      &__item {
+        width: 100%;
+        margin-bottom: 24px;
+
+        @include tablet {
+          margin-bottom: 0px;
+          width: calc(50% - 16px);
+        }
+
+        .btn__whatsapp {
+          display: flex;
+          align-items: center;
+          margin-bottom: 16px;
+          color: #00AFAA;
+          font-family: $rubik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+
+          svg {
+            margin-right: 16px;
+          }
+        }
+
+        &.col-2 {
+          .box {
+            &:first-child {
+              margin-bottom: 24px;
+
+              @include tablet {
+                margin-bottom: 42px;
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .box {
+      display: flex;
+      flex-flow: wrap;
+    }
+
+    .box-contact {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px;
+      border-radius: 11px;
+      border: 1px solid #D9E8FF;
+      background: #FFF;
+      box-shadow: 0px 4px 24px 0px rgba(156, 196, 219, 0.25);
+      align-items: center;
+
+      img {
+        width: 96px;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        margin-right: 12px;
+      }
+
+      a {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__img {
+    max-width: 486px;
+    width: 100%;
+
+    @include mobile {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      height: auto;
+      border-radius: 50px;
+    }
+  }
+}

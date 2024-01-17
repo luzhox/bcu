@@ -15,8 +15,8 @@
     //Segundo Widget de Footer
     register_sidebar(array(
         'name'=>'Nuevo Widget',
-        'id'=>'newWidget',
-        'before_widget'=>'<div class="otros">',
+        'id'=>'newwidget',
+        'before_widget'=>'<div class="Sede">',
         'after_widget'=>'</div>',
         'before_title'=>'<h3>',
         'after_title'=>'</h3>'

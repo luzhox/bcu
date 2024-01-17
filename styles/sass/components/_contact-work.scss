@@ -1,0 +1,40 @@
+.contact-work {
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    min-height: 400px;
+  }
+
+  h3 {
+    color: #002169;
+    font-family: $rubik;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin-bottom: 24px;
+    text-align: center;
+
+    strong {
+      color: var(--Turqueza, #00AFAA);
+      font-weight: 600;
+    }
+
+    /* 52px */
+    @include tablet {
+      font-size: 40px;
+    }
+  }
+
+  p {
+    font-family: $rubik;
+    font-size: 20px;
+    text-align: center;
+
+    strong {
+      color: var(--Turqueza, #00AFAA);
+      font-weight: 600;
+    }
+  }
+}

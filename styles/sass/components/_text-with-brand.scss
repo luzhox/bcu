@@ -1,0 +1,65 @@
+.text-with-brand {
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: 278px;
+    height: 154px;
+    border-radius: 278px;
+    opacity: 0.2;
+    background: #56D1E5;
+    filter: blur(49px);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &::after {
+    content: '';
+    width: 278px;
+    height: 154px;
+    border-radius: 278px;
+    opacity: 0.2;
+    background: #56D1E5;
+    filter: blur(49px);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @include tablet {
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+
+  img {
+    height: 75px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+
+  .btn__primary--border {
+    @include tablet {
+      padding: 16px 48px;
+    }
+  }
+
+  p {
+    color: #161D2D;
+    text-align: center;
+    font-family: $rubik;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 27.5px;
+    /* 152.778% */
+    max-width: 794px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,140 @@
+.text-video {
+  position: relative;
+  overflow-x: hidden;
+
+
+  @include tablet {
+    .circle {
+      width: 367px;
+      height: 335px;
+      position: absolute;
+      left: 0;
+      border-radius: 367px;
+      opacity: 0.7;
+      background: #D7F8FF;
+      filter: blur(70px);
+      top: 150px;
+      left: 0px;
+
+      &:nth-child(2) {
+        background: #73F5AF;
+        right: -150px;
+        left: inherit;
+        top: 0;
+        opacity: 0.2;
+
+      }
+
+      &:nth-child(3) {
+        top: -50px;
+        background: #73F5AF;
+        opacity: 0.2;
+
+        left: -150px;
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-flow: wrap;
+
+
+    @include tablet {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    max-width: 535px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    h3,
+    h2 {
+      color: #002169;
+      font-family: $rubik;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      margin-bottom: 24px;
+
+      @include tablet {
+        font-size: 50px;
+      }
+    }
+
+    p {
+      color: var(--Azul, #002169);
+      text-align: justify;
+      font-family: $rubik;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      strong {
+        font-weight: 700;
+        margin-top: 24px;
+        display: block;
+
+        @include mobile {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    max-width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    width: 100%;
+    overflow: hidden;
+
+    @include tablet {
+      max-width: 503px;
+
+      height: 403px;
+    }
+
+    .overlay {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      background: rgba(0, 0, 0, 0.20);
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        @include mobile {
+          width: 80px;
+          height: 80px;
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+.suscribe {
+  @include mobile {
+    padding-top: 24px;
+  }
+
+  &__content {
+    max-width: 1054px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
+    @include tablet {
+      justify-content: space-between;
+    }
+
+    &__form {
+      max-width: 487px;
+
+      .checkbox-button {
+        flex-flow: wrap;
+      }
+
+      h3 {
+        color: var(--Azul, #002169);
+        font-family: $rubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+        margin-top: 32px;
+
+        @include tablet {
+          font-size: 48px;
+          margin-top: 0px;
+        }
+
+        /* 62.4px */
+        strong {
+          color: var(--Turqueza, #00AFAA);
+          font-weight: 500;
+
+        }
+      }
+    }
+
+    &__img {
+      width: 486px;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 50px;
+      }
+    }
+  }
+}
