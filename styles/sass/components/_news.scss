@@ -1,0 +1,118 @@
+.news {
+
+  &__title {
+    margin-bottom: 32px;
+
+    @include tablet {
+      margin-bottom: 48px;
+    }
+
+    h3 {
+      color: var(--Negro, #2A2938);
+      font-family: $rubik;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 130%;
+      text-align: center;
+
+      /* 49.4px */
+      strong {
+        color: var(--Turqueza, #00AFAA);
+        font-family: $rubik;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+      }
+
+      @include tablet {
+        font-size: 48px;
+
+        strong {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+  &__all {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: wrap;
+
+    &__item {
+      width: 100%;
+      max-width: 384px;
+      background-color: #DCF9FF;
+      border-radius: 24px;
+      transition: ease-in-out transform .3s;
+      margin-bottom: 32px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      @include tablet {
+        margin-right: 24px;
+        margin-bottom: 0px;
+
+      }
+
+      &:hover {
+        transform: scale(1.05) !important;
+      }
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &__text {
+        padding: 32px 24px;
+
+        h3 {
+          color: var(--verde-oscuro, #00373D);
+          font-family: $rubik;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 120%;
+          /* 26.4px */
+        }
+
+        p {
+          color: var(--verde-oscuro, #00373D);
+          text-align: justify;
+          font-family: $rubik;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          letter-spacing: -0.375px;
+          margin-top: 16px;
+        }
+      }
+
+      &__img {
+        img {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 24px;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+  }
+}

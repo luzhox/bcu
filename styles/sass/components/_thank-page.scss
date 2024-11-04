@@ -1,0 +1,125 @@
+.thank-page {
+  margin-top: 90px;
+  position: relative;
+
+  @include tablet {
+    margin-top: 96px;
+  }
+
+  @include tablet {
+    .circle {
+      width: 367px;
+      height: 335px;
+      position: absolute;
+      left: 0;
+      border-radius: 367px;
+      opacity: 0.7;
+      background: #D7F8FF;
+      filter: blur(70px);
+      top: 150px;
+      left: 0px;
+
+      &:nth-child(2) {
+        background: #73F5AF;
+        right: -150px;
+        left: inherit;
+        top: 0;
+        opacity: 0.2;
+
+      }
+
+      &:nth-child(3) {
+        top: -50px;
+        background: #73F5AF;
+        opacity: 0.2;
+
+        left: -150px;
+      }
+    }
+  }
+
+
+  &__content {
+    display: flex;
+    flex-flow: wrap-reverse;
+    align-items: center;
+
+    @include tablet {
+      flex-flow: wrap;
+
+      justify-content: space-between;
+    }
+  }
+
+  &__text {
+    max-width: 690px;
+    width: 100%;
+
+    h2,
+    h4,
+    h3 {
+      color: #002169;
+      font-family: $rubik;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+
+      strong {
+        color: #00AFAA;
+        font-weight: 700;
+      }
+
+      @include tablet {
+        font-size: 50px;
+      }
+    }
+
+    a {
+      @extend .btn__primary;
+      margin-top: 24px;
+    }
+
+    p {
+
+      color: $gray;
+      font-family: $rubik;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+
+      @include tablet {
+        font-size: 24px;
+      }
+
+      strong {
+        color: var(--Turqueza, #00AFAA);
+        font-weight: 400;
+
+      }
+
+    }
+
+  }
+
+  &__img {
+    max-width: 486px;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 280px;
+      display: block;
+      object-fit: cover;
+      border-radius: 24px;
+      margin-bottom: 24px;
+
+      @include tablet {
+        height: 456px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+}

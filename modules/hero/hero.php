@@ -3,8 +3,21 @@
         <?php if (have_rows('sliderhero')) {
             while (have_rows('sliderhero')) {
                 the_row(); ?>
-                <div class="hero-item">
-                    <div class="overlay" style="background-color:<?php the_sub_field('overlay') ?>"></div>
+                <div class="hero-item <?php the_sub_field("type") ?>" data-aos="fade-in">
+                    <?php $overLayActive = get_sub_field('isOverlay');if ($overLayActive) : ?>
+                        <div class="overlay" style="background-color:<?php the_sub_field('overlay') ?>"></div>
+                    <?php endif; ?>
+                    <?php
+                        $link = get_sub_field('linkGeneral');
+                        $hayboton = get_sub_field('linkGeneral');
+                        if ($hayboton) :
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+                        ?>
+                            <a class="areaLink" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"></a>
+                        <?php endif; ?>
+                    
                     <?php
                     $image = get_sub_field('imagen_de_escritorio');
                     if (!empty($image)) : ?>
@@ -25,13 +38,12 @@
                             $link_title = $link['title'];
                             $link_target = $link['target'] ? $link['target'] : '_self';
                         ?>
-                            <a href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                            <a class="btn__primary" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                         <?php endif; ?>
 
                     </div>
                 </div>
-        <?php }
-        } ?>
+        <?php }} ?>
     </div>
     <div class="vermas">
         <?php

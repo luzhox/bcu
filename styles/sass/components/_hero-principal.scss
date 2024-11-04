@@ -1,4 +1,11 @@
 .hero {
+    overflow: hidden;
+    margin-top: 90px;
+
+    @include tablet {
+        margin-top: 96px;
+    }
+
     .hero-container {
         .owl-prev {
             &::before {
@@ -49,15 +56,21 @@
         }
 
         .owl-nav {
-            position: relative !important;
+            position: absolute !important;
             text-align: right !important;
-            margin-top: -116px !important;
+            margin-top: 0px !important;
             max-width: 1184px !important;
             margin-left: auto !important;
             margin-right: auto !important;
+            bottom: 20px;
+            width: 100%;
+            right: 16px;
+
 
             @include mobile {
+                position: relative !important;
                 top: -95px;
+                right: inherit !important;
                 text-align: left !important;
                 left: 0px !important;
                 max-width: 480px;
@@ -94,7 +107,8 @@
         .hero-item {
             position: relative;
             z-index: 1;
-            min-height: 100vh;
+            height: 100vh;
+            max-height: 590px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,15 +119,35 @@
                 height: 100%;
                 width: 100%;
                 z-index: -1;
+                background: linear-gradient(275deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
                 opacity: 0.53;
             }
+            .areaLink{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                z-index: 99999;
+            }
+
 
             img {
                 position: absolute;
                 z-index: -2;
                 object-fit: cover;
                 height: 100vh;
+                max-height: 590px;
                 width: 100%;
+            }
+
+            @media only screen and (min-width:1500px) {
+                max-height: 730px;
+
+                img {
+                    max-height: 730px;
+
+                }
             }
 
             .container {
@@ -123,16 +157,15 @@
             &__content {
                 width: 100%;
 
-                h2 {
-                    font-family: $primary-text;
+                h2,
+                h3 {
+                    font-family: $rubik;
                     font-style: normal;
                     font-weight: 300;
-                    font-size: 52px;
-                    line-height: 63px;
+
                     letter-spacing: -1px;
                     color: #ffffff;
-                    margin-bottom: 32px;
-                    width: col(18, 37);
+                    width: 100%;
                     margin-left: 0;
 
                     strong {
@@ -151,24 +184,20 @@
                         font-size: 44px;
                         line-height: 52px;
                     }
+
+                    @include desktop {
+                        font-size: 48px;
+                        line-height: 63px;
+                        max-width: 444px;
+                    }
                 }
 
-                a {
-                    font-family: $primary-text;
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 24px;
-                    text-transform: uppercase;
-                    text-align: center;
-                    color: $color-primary-text-button;
-                    background: $primary;
-                    @include border-radius(8px);
-                    display: inline-block;
-                    padding: 16px 32px;
+                .btn__primary {
+                    margin-top: 16px;
 
-                    &:hover {
-                        background: $primary-hover;
+                    @include tablet {
+                        margin-top: 40px;
+
                     }
                 }
 
@@ -177,6 +206,38 @@
                     max-width: 840px;
                     margin-left: auto;
                     margin-right: auto;
+                }
+            }
+
+            &.black {
+                .hero-item__content {
+
+                    h3,
+                    h2 {
+                        color: $gray;
+                    }
+                }
+            }
+
+            &.black {
+                @include mobile {
+                    .hero-item__content {
+
+                        h3,
+                        h4,
+                        h5 {
+                            color: white;
+                        }
+                    }
+                }
+
+                .overlay {
+                    background: linear-gradient(275deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+                    @include mobile {
+                        background: linear-gradient(275deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+                    }
                 }
             }
         }

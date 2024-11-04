@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<?php include('inc/modalFlotante.php')?>
+
 <?php include('menu.php')?>
 		<?php $args = array(
 			'posts_per_page'=> 1,

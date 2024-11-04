@@ -1,0 +1,253 @@
+.promotions {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .container {
+    @include mobile {
+      width: 100%;
+      padding-left: 32px;
+
+    }
+  }
+
+  .circle {
+    display: none;
+
+    @include tablet {
+      display: block;
+      width: 154px;
+      height: 154px;
+      position: absolute;
+      left: -60px;
+      top: 120px;
+      background: #00ABC7;
+      opacity: 0.3;
+      filter: blur(49px);
+
+
+      &.two {
+
+        top: 120px;
+        left: inherit;
+        right: -60px;
+        background: #B1B42A;
+        opacity: 0.3;
+        filter: blur(49px);
+      }
+    }
+  }
+
+  &__content {
+    max-width: 1200px;
+    display: flex;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+
+    @include mobile {
+      overflow-x: scroll;
+      padding-right: 32px;
+    }
+
+    @include tablet {
+      flex-flow: wrap;
+      justify-content: center;
+
+
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 282px;
+    max-width: 282px;
+    min-width: 282px;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 30px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    scroll-snap-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #00AFAA;
+      opacity: 0;
+
+    }
+
+    .seeMore {
+      @extend .btn;
+      background-color: #fff;
+      color: #00AFAA;
+      position: relative;
+      z-index: 2;
+      top: 100%;
+      font-weight: 600;
+    }
+
+    &:hover {
+      .seeMore {
+        top: 0px;
+      }
+
+      &::before {
+        opacity: 0.7;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.modal-promotions {
+
+
+  .overlay {}
+
+  &__content {
+    position: fixed;
+    max-width: 932px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 999999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 32px 0px 0px 32px;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
+    @include tablet {
+      top: 32px;
+    }
+
+    &__img {
+      width: 407px;
+      margin-right: 24px;
+
+      img {
+        width: 70%;
+        height: auto;
+        display: block;
+        border-radius: 40px;
+        margin-bottom: 32px;
+
+        @include tablet {
+          width: 100%;
+        }
+      }
+    }
+
+    &__text {
+      max-width: 469px;
+      text-align: justify;
+
+      &__title {
+
+        color: var(--Azul, #002169);
+        font-family: $rubik;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        padding-right: 55px;
+
+        @include tablet {
+          font-size: 32px;
+        }
+
+      }
+
+      &__content {
+        max-height: 303px;
+        overflow-y: auto;
+        margin-top: 16px;
+        padding-bottom: 24px;
+        padding-right: 32px;
+
+        @include tablet {
+          max-height: 373px;
+
+        }
+
+        ul li {
+          color: var(--Negro, #2A2938);
+          font-family: $rubik;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 130%;
+
+          @include tablet {
+            font-size: 16px;
+
+          }
+        }
+
+        p {
+          color: var(--Negro, #2A2938);
+          font-family: $rubik;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 130%;
+
+          @include tablet {
+            font-size: 16px;
+
+          }
+
+          b {
+            font-weight: 700;
+            margin-top: 10px;
+            font-family: $rubik;
+
+            margin-bottom: 12px;
+            display: block;
+            font-style: normal;
+            color: var(--Negro, #2A2938);
+          }
+
+          a {
+            color: var(--Turqueza, #00AFAA);
+            font-weight: 700;
+            font-family: $rubik;
+          }
+
+          strong {
+            color: var(--Turqueza, #00AFAA);
+            font-weight: 700;
+            font-family: $rubik;
+
+            em {
+              font-weight: 700;
+              margin-top: 10px;
+              font-family: $rubik;
+
+              margin-bottom: 12px;
+              display: block;
+              font-style: normal;
+              color: var(--Negro, #2A2938);
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
